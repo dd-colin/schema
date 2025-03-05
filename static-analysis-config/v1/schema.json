@@ -83,14 +83,6 @@
 				}
 			}
 		},
-		"emptyRuleset": {
-			"type": "object",
-			"additionalProperties": {
-				"type": "null"
-			},
-			"minProperties": 1,
-			"maxProperties": 1
-		},
 		"ruleset": {
 			"type": "object",
 			"properties": {
@@ -107,7 +99,9 @@
 					"$ref": "#/definitions/pathList"
 				}
 			},
-			"minProperties": 2
+			"required": [
+				"rules"
+			]
 		},
 		"pathList": {
 			"type": "array",
