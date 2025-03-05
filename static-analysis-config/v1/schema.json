@@ -107,7 +107,11 @@
 			"type": "array",
 			"items": {
 				"type": "string",
-				"minLength": 1
+				"minLength": 1,
+				"pattern": "^(\\*\\*?/|\\.?[^/\\n]+/)*[^/\\n]+$",
+				"errorMessage": {
+					"pattern": "Invalid path pattern, must be a valid glob pattern"
+				}
 			}
 		},
 		"argumentValue": {
